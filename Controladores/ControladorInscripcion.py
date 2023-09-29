@@ -15,10 +15,6 @@ class ControladorInscripcion():
     def index(self):
         return self.repositorioInscripcion.findAll()
 
-    """
-    Asignacion estudiante y materia a inscripción
-    """
-
     def create(self, infoInscripcion, id_estudiante, id_materia):
         nuevaInscripcion = Inscripcion(infoInscripcion)
         elEstudiante = Estudiante(self.repositorioEstudiantes.findById(id_estudiante))
@@ -30,10 +26,6 @@ class ControladorInscripcion():
     def show(self, id):
         elInscripcion = Inscripcion(self.repositorioInscripcion.findById(id))
         return elInscripcion.__dict__
-
-    """
-    Modificación de inscripción (estudiante y materia)
-    """
 
     def update(self, id, infoInscripcion, id_estudiante, id_materia):
         laInscripcion = Inscripcion(self.repositorioInscripcion.findById(id))

@@ -1,17 +1,8 @@
 from Modelos.Estudiante import Estudiante
 from Repositorios.RepositorioEstudiante import RepositorioEstudiante
 
-"""
-Dentro de la clase se crean unos metodos, estos serán los encargados de manipular 
-a los modelos, en estos se programarán las tareas básicas tales como crear, listar, 
-visualizar, modificar y eliminar. (CRUD)
-"""
-
-
 class ControladorEstudiante():
-    """
-    constructor que permite llevar a cabo la creacion de instancias del controlador.
-    """
+
     def __init__(self):
         self.repositorioEstudiante = RepositorioEstudiante()
         print("Creando ControladorEstudiante")

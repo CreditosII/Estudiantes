@@ -29,9 +29,6 @@ class ControladorMateria:
     def delete(self, id):
         return self.repositorioMateria.delete(id)
 
-    """
-    Relación departamento y materia
-    """
     def asignarDepartamento(self, id, id_departamento):
         materiaActual = Materia(self.repositorioMateria.findById(id))
         departamentoActual = Departamento(self.repositorioDepartamento.findById(id_departamento))
